@@ -4,7 +4,15 @@
 
 用于PTA的气球小工具，CCPC竞赛当学生教练期间为了发气球写的。
 
-## 2. 使用方法
+## 2. 环境准备
+
+对于Debian/Ubuntu系统（Windows Subsystem for Linux也可以）：
+
+```
+apt install php-mbstring php-cli curl
+```
+
+## 3. 使用方法
 
 1. 打开Chrome浏览器，使用教练号登录PTA，进入对应比赛查看排名。
 
@@ -16,4 +24,4 @@
 
 4. 在当前文件夹执行php check.php，看输出即可。
 
-![效果图](readme/2.png)
+   ![效果图](readme/2.png)
