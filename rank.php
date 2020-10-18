@@ -15,32 +15,26 @@
 			$i ++;
 		}
 	}
-	function check_all($team_key='*') {
+	function get_rank($team_key='*') {
+		$list = explode("\n",trim(file_get_contents("正式队伍.txt")));
+		$mp = array();
+		foreach ($list as $each) $mp[trim($each)] = true;
 		$i = 0;
+		$rank = 0;
 		while (true) {
 			$board = get_page($i);
 			if (empty($board)) break;
 			//if (count($board) == 0) break;
 			foreach ($board as $each) {
 				$team = $each['user']['user']['nickname'];
+				if ($mp[$team]) $rank ++;
 				if ($team_key == '*' || !(strpos($team,$team_key) === false)) {
-					foreach ($each['problemScores'] as $problem => $probleminfo) {
-						if (intval($probleminfo['score']) == 0) continue;
-						if (!$GLOBALS['vis'][sprintf("%s %s\n",$team,$problem)]) {
-							echo sprintf("%s %s\n",$team,$problem);
-						}
-						$GLOBALS['vis'][sprintf("%s %s\n",$team,$problem)] = true;
-						
-					}
+					echo sprintf("%s %d\n",$team,$rank);
 				}
 			}
 			$i ++;
 			sleep(1);
 		}
 	}
-	while (true) {
-		check_all("_重大_");
-		sleep(10);
-	}
-	
+	get_rank("_重大_");
 ?>
