@@ -15,3 +15,5 @@
 3. 修改check.php，$team_key修改为对应学校昵称。
 
 4. 在当前文件夹执行php check.php，看输出即可。
+
+![效果图](readme/2.png)
