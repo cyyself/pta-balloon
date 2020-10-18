@@ -1,0 +1,15 @@
+curl 'https://pintia.cn/api/problem-sets/1316552220767801344/rankings?page=0&limit=50' \
+  -H 'Connection: keep-alive' \
+  -H 'Pragma: no-cache' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Accept: application/json;charset=UTF-8' \
+  -H 'Accept-Language: zh-CN' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.80 Safari/537.36' \
+  -H 'DNT: 1' \
+  -H 'Content-Type: application/json;charset=UTF-8' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Referer: https://pintia.cn/problem-sets/1316552220767801344/rankings?page=0' \
+  -H 'Cookie: _ga=xxxxxxxxx' \
+  --compressed
