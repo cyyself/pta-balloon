@@ -15,6 +15,13 @@
 			$i ++;
 		}
 	}
+	function get_medal($rank,$team) {//for CCPC
+		$team = min($team,240);
+		if ($rank <= $team * 0.1) return "Au";
+		else if ($rank <= $team * 0.3) return "Ag";
+		else if ($rank <= $team * 0.6) return "Cu";
+		else return "Fe";
+	}
 	function get_rank($team_key='*') {
 		$list = explode("\n",trim(file_get_contents("正式队伍.txt")));
 		$mp = array();
@@ -29,7 +36,7 @@
 				$team = $each['user']['user']['nickname'];
 				if ($mp[$team]) $rank ++;
 				if ($team_key == '*' || !(strpos($team,$team_key) === false)) {
-					echo sprintf("%s %d\n",$team,$rank);
+					echo sprintf("%s %d %s\n",$team,$rank,get_medal($rank,count($list)));
 				}
 			}
 			$i ++;
