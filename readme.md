@@ -19,6 +19,8 @@ apt install php-mbstring php-cli curl
 2. 进入审查元素，然后切换到排名的第二页，再回到第一页，在对应的网络请求上Copy as curl，然后放入curl_cmd.txt。
 
    ![1.png](readme/1.png)
+   
+   注：在Windows下此处有两个选项，若直接在Windows下使用php与curl，应使用(cmd)，如果整个运行环境在WSL或Linux中，应使用(bash)。
 
 3. 修改check.php，$team_key修改为对应学校昵称。
 
