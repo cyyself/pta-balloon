@@ -1,4 +1,5 @@
 <?php
+	error_reporting(0);
 	$GLOBALS['curl_cmd'] = file_get_contents("curl_cmd.txt");
 	$GLOBALS['vis'] = array();
 	if (strpos($GLOBALS['curl_cmd'],"page=0&limit=50") === false) {
