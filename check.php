@@ -27,6 +27,8 @@
 					foreach ($each['problemScores'] as $problem => $probleminfo) {
 						if (intval($probleminfo['score']) == 0) continue;
 						if (!$GLOBALS['vis'][sprintf("%s %s\n",$team,$problem)]) {
+							echo "\07";
+							echo "\n";
 							echo sprintf("%s %s\n",$team,$problem);
 						}
 						$GLOBALS['vis'][sprintf("%s %s\n",$team,$problem)] = true;

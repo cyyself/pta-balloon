@@ -36,8 +36,6 @@
 				$team = $each['user']['user']['nickname'];
 				if ($mp[$team]) $rank ++;
 				if ($team_key == '*' || !(strpos($team,$team_key) === false)) {
-					echo "\07";
-					echo "\n";
 					echo sprintf("%s %d %s\n",$team,$rank,get_medal($rank,count($list)));
 				}
 			}
