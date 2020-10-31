@@ -10,8 +10,13 @@
 
 对于Debian/Ubuntu系统（Windows Subsystem for Linux也可以）：
 
-```
+```bash
 apt install php-cli curl
+```
+
+若要使用辅助工具notify.sh来增强提示效果：
+```bash
+apt install sox
 ```
 
 ## 3. 气球使用方法
@@ -31,6 +36,7 @@ apt install php-cli curl
 4. 在当前文件夹执行`php check.php`，看输出即可。
 
    ![效果图](readme/2.png)
+  
 
 ## 4. 查看正式排名
 
